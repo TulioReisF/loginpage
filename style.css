@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #23242a;
+}
+
+h2{
+    color: #a200ff;
+    padding-bottom: 40px;
+    font-size: 28px;
+}
+
+span{
+    color: #d4d4d4;
+    
+}
+
+input{
+    padding-left: 5px;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.enter{
+    text-decoration: none;
+    color: #d4d4d4;
+    padding: 15px 40px;
+    border-radius: 5px;
+    background-color: #a200ff;
+}
+
+.container{
+    position: relative;
+    width: 23.75rem;
+    height: 26.25rem;
+    background-color: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 23.75rem;
+    height: 26.25rem;
+    background: linear-gradient(0deg, transparent, #a200ff, #a200ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 23.75rem;
+    height: 26.25rem;
+    background: linear-gradient(0deg, transparent, #a200ff, #a200ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+}
